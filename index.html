@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <section class="fixednav">
+            <nav id="mainNav">
+                <a href="#" class="navlink ">Home</a>
+                <a href="#" class="navlink">About</a>
+                <a href="#" class="navlink">Services</a>
+                <a href="#" class="navlink">Contact</a>
+              </nav>
+    </section>
+
+
+
+<!-- first block -->
+<section>
+    <div class="panel" data-color="white" style="background-color: no-repeat; background-size:auto; background-color: white;" >      
+        <img src="images/minimo.jpg" alt="img" style="height: fit-content; width: 40%;"/> 
+        <h1>start scrolling to see changes</h1>       
+    </div>
+
+    <div class="panel" data-color="blue" >
+        <img src="images/bird.png" alt="img" style="height: fit-content; width: 40%;"/>
+    </div>
+
+    <div class="panel" data-color="orange" >
+        <img src="images/unnamed.png" alt="img" style="height: fit-content; width: 20%;"/>
+    </div>
+
+    <div class="panel" data-color="pink" >
+        <img src="images/pink-gift-box-sticker-presents-isolated-on-transparent-background-colorful-wrapped-sale-shopping-concept-collection-for-birthday-christmas-cartoon-flat-design-pink-blue-color-free-png.webp" alt="img" style="height: fit-content; width: 20%;"/>
+    </div>
+
+    <div class="panel" data-color="yellow" >
+        <img src="images/yellow.png" alt="img" style="height: fit-content; width: 20%;"/>
+    </div>
+
+    <div class="panel" data-color="red" >
+        <img src="images/1764113.png" alt="img" style="height: fit-content; width: 20%;"/>
+    </div>
+
+</section>
+
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script>
+
+$(window).scroll(function()  {
+      var $window = $(window),
+          $body = $('body'),
+          $panel =$('.panel')
+
+          var scroll = $window.scrollTop( ) + ($window.height( ) /3);
+          $panel.each(function () {
+            var $this = $(this);
+            if ($this.position().top <= scroll &&
+            $this.position().top + $this.height() > scroll ) {
+                $body.removeClass(function (index,css){
+                    return (css.match (/(^|\s) color-\S+/g)||
+                    []).join(' ');
+                });
+
+                $body.addClass('color-' +$(this).data('color'));
+            }
+          })
+})
+
+</script>
+
+</body>
+</html>

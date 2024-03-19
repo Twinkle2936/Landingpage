@@ -1,0 +1,73 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.panel{
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ 
+}
+
+.color-blue{
+  background: blue;
+}
+
+.color-orange{
+  background:orange;
+}
+
+.color-pink{
+  background:pink;
+}
+
+.color-green{
+  background:#4ceb24;
+}
+.color-yellow{
+  background: rgb(233, 218, 6);
+}
+
+.color-red{
+  background: rgb(255, 0, 43);
+}
+
+h1,h2{
+  font-size: 3em;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+
+
+
+.section {
+    margin-top: 60px;
+    padding: 20px;
+  }
+  
+.fixednav{
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  
+  color: white;
+  font-size: x-large;
+}
+
+.navlink:hover{
+  background-color: aqua;
+  
+}
+
+#mainNav{
+  padding: 2%;
+  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+}
+
+#mainNav a{
+  padding: 1%;
+  border-radius: 49%;
+  color: darkblue;
+
+}
